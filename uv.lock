@@ -9,7 +9,6 @@ dependencies = [
     { name = "docx" },
     { name = "olefile" },
     { name = "python-docx" },
-    { name = "spire-doc" },
 ]
 
 [package.metadata]
@@ -17,7 +16,6 @@ requires-dist = [
     { name = "docx", specifier = ">=0.2.4" },
     { name = "olefile", specifier = ">=0.47" },
     { name = "python-docx", specifier = ">=1.1.2" },
-    { name = "spire-doc", specifier = ">=12.7.1" },
 ]
 
 [[package]]
@@ -92,15 +90,6 @@ wheels = [
 ]
 
 [[package]]
-name = "plum-dispatch"
-version = "1.7.4"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/39/4e/f4d6b2bd80a9880989d37773f0f2e3a91a2d5352732e4ebb68b5606bca83/plum-dispatch-1.7.4.tar.gz", hash = "sha256:1c1d15b2842b5fa98405fd3dff6fad4887bdc77b60bd200e209d76ebfe9990fe", size = 56429 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/e6/b6/3aaa985591c63da64c7bd8c5f470442a4c00b37ad3ed057f21de14174f83/plum_dispatch-1.7.4-py3-none-any.whl", hash = "sha256:c40dbeab269bbbf972ce0dbc078380da19ebaee1a370a2c564e1814a11bde216", size = 24238 },
-]
-
-[[package]]
 name = "python-docx"
 version = "1.1.2"
 source = { registry = "https://pypi.org/simple" }
@@ -111,19 +100,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/35/e4/386c514c53684772885009c12b67a7edd526c15157778ac1b138bc75063e/python_docx-1.1.2.tar.gz", hash = "sha256:0cf1f22e95b9002addca7948e16f2cd7acdfd498047f1941ca5d293db7762efd", size = 5656581 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/3e/3d/330d9efbdb816d3f60bf2ad92f05e1708e4a1b9abe80461ac3444c83f749/python_docx-1.1.2-py3-none-any.whl", hash = "sha256:08c20d6058916fb19853fcf080f7f42b6270d89eac9fa5f8c15f691c0017fabe", size = 244315 },
-]
-
-[[package]]
-name = "spire-doc"
-version = "12.7.1"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "plum-dispatch" },
-]
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/11/69/6c69479a518822c7295fdaa10a0aed3c95fa3d62676fca077fd20b93b946/Spire.Doc-12.7.1-py3-none-macosx_10_7_universal.whl", hash = "sha256:e28741779dae5a14e2b5138a5b4a9ec5960a5d6c2d7a2973ac7347e0b8e69cf0", size = 48486816 },
-    { url = "https://files.pythonhosted.org/packages/a7/28/b6e3e998efc7525954fe5adc3db807247fd88b9514b2c22804cb8cc83981/Spire.Doc-12.7.1-py3-none-manylinux1_x86_64.whl", hash = "sha256:68b0138f53bc4cb326a6aa904171c0e66e430337fb9ba0c3acaa74eb2ef567a5", size = 42420211 },
-    { url = "https://files.pythonhosted.org/packages/05/73/cedc7e28cd583ab545468d24ffbc1a8b327fbe6218f037c4e6726b81ea16/Spire.Doc-12.7.1-py3-none-win_amd64.whl", hash = "sha256:f7cf1a82272abb41a46372bd67d71bb5b59d3062be32732275d37c471929b432", size = 27027822 },
 ]
 
 [[package]]

@@ -8,6 +8,5 @@ dependencies = [
     "docx>=0.2.4",
     "olefile>=0.47",
     "python-docx>=1.1.2",
-    "spire-doc>=12.7.1",
 ]
 

@@ -23,16 +23,27 @@ def extract_from_ole(ole_path, output_dir, index):
     if olefile.isOleFile(ole_path):
         ole = olefile.OleFileIO(ole_path)
         for entry in ole.listdir():
-            if entry[0] == 'WordDocument':
-                docx_path = os.path.join(output_dir, f"nested_doc_{index}.docx")
-                with open(docx_path, "wb") as f:
-                    f.write(ole.openstream(entry).read())
-                print(f"Extracted nested DOCX document {index}")
-            elif entry[0] == 'CONTENTS':
-                pdf_path = os.path.join(output_dir, f"nested_doc_{index}.pdf")
-                with open(pdf_path, "wb") as f:
-                    f.write(ole.openstream(entry).read())
-                print(f"Extracted nested PDF document {index}")
+            match entry[0]:
+                case 'WordDocument':
+                    docx_path = os.path.join(output_dir, f"nested_doc_{index}.docx")
+                    with open(docx_path, "wb") as f:
+                        f.write(ole.openstream(entry).read())
+                    print(f"Extracted nested DOCX document {index}")
+                case 'CONTENTS':
+                    pdf_path = os.path.join(output_dir, f"nested_doc_{index}.pdf")
+                    with open(pdf_path, "wb") as f:
+                        f.write(ole.openstream(entry).read())
+                    print(f"Extracted nested PDF document {index}")
+                case 'Workbook':  # Excel
+                    xls_path = os.path.join(output_dir, f"nested_doc_{index}.xls")
+                    with open(xls_path, "wb") as f:
+                        f.write(ole.openstream(entry).read())
+                    print(f"Extracted nested XLS document {index}")
+                case 'PowerPoint Document':
+                    ppt_path = os.path.join(output_dir, f"nested_doc_{index}.ppt")
+                    with open(ppt_path, "wb") as f:
+                        f.write(ole.openstream(entry).read())
+                    print(f"Extracted nested PPT document {index}")                 
 
 def main():
     docx_path = "data/TS-Copy WBS Plan to Plan.docx"

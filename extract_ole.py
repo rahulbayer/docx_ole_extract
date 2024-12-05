@@ -44,7 +44,7 @@ def extract_from_ole(ole_path, output_dir, index, partname):
                     with open(docx_path, "wb") as f:
                         f.write(ole.openstream(entry).read())
                     print(f"Extracted nested DOCX document {index} with name {partname}")
-                case 'CONTENTS':
+                case 'CONTENTS': # PDF
                     pdf_path = os.path.join(output_dir, f"{partname}_nested_doc_{index}.pdf")
                     with open(pdf_path, "wb") as f:
                         f.write(ole.openstream(entry).read())
